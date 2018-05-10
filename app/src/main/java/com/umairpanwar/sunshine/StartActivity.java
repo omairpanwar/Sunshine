@@ -43,6 +43,7 @@ public class StartActivity extends AppCompatActivity {
         setContentView(R.layout.main_activity_recyclerview_widget);
         this.context = this;
 
+
         recyclerView = findViewById(R.id.mainRecyclerview);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         new JsonApiWeather("hafizabad").execute();
@@ -64,7 +65,7 @@ public class StartActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.menulocation:
-                Intent intent = new Intent(this, CitiesListRecyclerview.class);
+                Intent intent = new Intent(this, CitiesListActivity.class);
                 startActivityForResult(intent, 1);
                 break;
 

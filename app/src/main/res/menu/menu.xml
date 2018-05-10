@@ -5,15 +5,6 @@
     android:title="Location"
     >
 </item>
-    <item
-        android:title="Temperature">
-    </item>
-
-    <item
-        android:title="Notifications"
-        android:checkable="true"
-        >
-    </item>
 
 </menu>
 

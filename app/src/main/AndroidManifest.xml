@@ -19,7 +19,8 @@
         </activity>
         <activity android:name="com.umairpanwar.sunshine.IntentActivity"
             android:parentActivityName="com.umairpanwar.sunshine.StartActivity"/>
-        <activity android:name="com.umairpanwar.sunshine.CitiesListRecyclerview"
+        <activity
+            android:name="com.umairpanwar.sunshine.CitiesListActivity"
             android:parentActivityName="com.umairpanwar.sunshine.StartActivity"
             >
 

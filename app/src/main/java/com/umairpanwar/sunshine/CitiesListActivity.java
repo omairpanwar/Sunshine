@@ -14,7 +14,7 @@ import android.widget.TextView;
 
 import com.example.umairpanwar.sunshine.R;
 
-public class CitiesListRecyclerview extends AppCompatActivity {
+public class CitiesListActivity extends AppCompatActivity {
 
 
     public Context context1;
@@ -25,7 +25,7 @@ public class CitiesListRecyclerview extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.cities_list_recyclerview_widget);
 
-        this.context1=this;
+        this.context1 = this;
         recyclerView1 = findViewById(R.id.mainRecyclerview);
         recyclerView1.setLayoutManager(new LinearLayoutManager(context1));
         OurAdapter1 ourAdapter1 = new OurAdapter1();
@@ -35,9 +35,9 @@ public class CitiesListRecyclerview extends AppCompatActivity {
     }
 
 
-
-    private class OurAdapter1 extends RecyclerView.Adapter<OurAdapter1.ViewHolder>{
+    private class OurAdapter1 extends RecyclerView.Adapter<OurAdapter1.ViewHolder> {
         DataModel[] dataModels = new DataModel[10];
+
         public OurAdapter1() {
             dataModels[0] = new DataModel("Hafizabad");
             dataModels[1] = new DataModel("Gujranwala");
@@ -60,8 +60,8 @@ public class CitiesListRecyclerview extends AppCompatActivity {
 
         @Override
         public void onBindViewHolder(@NonNull OurAdapter1.ViewHolder holder, int position) {
-          DataModel item = dataModels[position];
-          holder.textView.setText(item.getCities());
+            DataModel item = dataModels[position];
+            holder.textView.setText(item.getCities());
         }
 
         @Override
@@ -71,6 +71,7 @@ public class CitiesListRecyclerview extends AppCompatActivity {
 
         public class ViewHolder extends RecyclerView.ViewHolder {
             TextView textView;
+
             public ViewHolder(View itemView) {
                 super(itemView);
                 itemView.setOnClickListener(new View.OnClickListener() {
@@ -79,7 +80,7 @@ public class CitiesListRecyclerview extends AppCompatActivity {
                         int position = getAdapterPosition();
                         DataModel data = dataModels[position];
                         Intent intent = new Intent();
-                        intent.putExtra("hh",data.getCities());
+                        intent.putExtra("hh", data.getCities());
                         setResult(RESULT_OK, intent);
                         finish();
                     }
@@ -88,13 +89,13 @@ public class CitiesListRecyclerview extends AppCompatActivity {
             }
         }
     }
-    public class DataModel{
+
+    public class DataModel {
         private String cities;
 
         public DataModel(String cities) {
             this.cities = cities;
         }
-
 
 
         public String getCities() {
