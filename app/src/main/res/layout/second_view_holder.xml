@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="80dp">
+
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:id="@+id/recyclerImageView"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="23dp"
+        android:src="@drawable/sunny"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="71dp"
+        android:layout_marginTop="16dp"
+        android:text="Tomorrow"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:id="@+id/mainrecTextViewday"
+        />
+
+    <TextView
+        android:id="@+id/mainTextViewstatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/mainrecTextViewday"
+        android:layout_below="@+id/mainrecTextViewday"
+        android:text="Rain" />
+
+    <TextView
+        android:id="@+id/mainTextViewmaxtemp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/mainrecTextViewday"
+        android:layout_marginEnd="38dp"
+        android:text="16"
+        android:textSize="20dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/mainTextViewmintemp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/mainrecTextViewday"
+        android:layout_marginEnd="45dp"
+        android:text="3"
+
+        />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"
+        android:visibility="visible"
+        >
+    </View>
+
+</RelativeLayout>
